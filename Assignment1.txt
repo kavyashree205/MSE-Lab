@@ -1,0 +1,48 @@
+Assignment 1-
+
+NAME - KAVYASHREE A
+USN - 1PI10IS045
+SEM & SEC - 7 'A'
+
+
+Differences between protocols and subclasses.
+
+																			Protocols-
+
+1. A protocol is a list of method declarations that is not bound to any one class. The methods are not implemented in the protocol; instead, classes conform to or adopt a protocol and within those classes the methods are implemented.
+
+2. Purpose of using a protocol
+-To declare methods for others to implement.
+-To declare the public interface to a class while hiding the nature of the class itself.
+-To mark similarities between classes that are not part of the same inheritance tree.
+-It helps in avoiding the complexities of subclassing, similar to the way categories do, but in a different manner.
+
+3. Advantage
+It helps to implement polymorphism. Without protocols, users of the class would have to subclass the original class, deal with any issues, and override the original methods. 
+
+4. Example 
+@protocol protocol-name
+
+@end
+
+																			Subclasses-
+
+1. A subclass is a class definition that inherits the definition of a superclass. All of the methods that are defined in the superclass are automatically defined in the subclass. 
+
+2. Purpose of using a subclass
+Subclassing is for when we want to inherit the traits and behaviors of the superclass while modifying it in some way. 
+
+3. Advantage
+Subclassing is more useful if we want to alter the behavior of only certain instances, and retain the original method for others.
+
+4. Example
+If there is a class called classname and a subclass called subclassname :
+
+@interface subclassname : classname {
+// instance variables that subclassname has but classname lacks 
+}
+// methods that subclassname has and classname may or may not go here. If both have it, subclassname's implementation override's classname's so long as an instance of subclassname is references.
+@end
+
+
+
